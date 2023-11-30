@@ -12,10 +12,10 @@ parseInt()	Parses a string and returns an integer
 
 */
 
-let score =false
+let score = false;
 // console.log(typeof score);   //for score = 35 o/p number
 
-let valueInNumber = Number(score)
+let valueInNumber = Number(score);
 // console.log(typeof valueInNumber);
 // console.log(valueInNumber);
 
@@ -25,18 +25,16 @@ let valueInNumber = Number(score)
 true => 1 ; false => 0
  */
 
-
 // for Booelan conversion
 
-let isLoggedIn = "Ashfaq"
- let isBoolean = Boolean(isLoggedIn)
+let isLoggedIn = "Ashfaq";
+let isBoolean = Boolean(isLoggedIn);
 //  console.log(isBoolean);
 /*
 1 => true;  0 => false
 "" => false
 "Ashfaq" => true
 */
-
 
 // for Number to string conversion
 
@@ -48,11 +46,9 @@ toPrecision()	Returns a string, with a number written with a specified length
 
 let someNumber = 1523;
 
-let stringNumber = String(someNumber)
+let stringNumber = String(someNumber);
 console.log(stringNumber);
 console.log(typeof stringNumber);
-
-
 
 /* 
 
@@ -79,7 +75,20 @@ function(){}	    NaN	                "function(){}"	    true
 { }	                NaN	                "[object Object]"	true	
 null	            0	                "null"	            false	
 undefined	        NaN	                "undefined"	        false
-.
-
 
 */
+
+// ***************** OPERATIONS *****************
+
+let str1 = 32;
+let str2 = "Ashfaq";
+
+let str3 = str1 + str2;
+
+// console.log(str3);
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log(1+ 2 +3+ "4");    //always remember in JS code readibility is from left to right
+// console.log("4" +3 +2+1);
+
+console.log(3 + 2 * 4 - (9 % 1) / 2);
