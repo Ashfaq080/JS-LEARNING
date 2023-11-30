@@ -5,6 +5,7 @@ variables in JS is declare in 4 ways
 2.Var
 3.Let
 4.Automatically
+It is considered good programming practice to always declare variables before use
 */
 
 
@@ -28,4 +29,4 @@ Prefer not to use var
 because of issue in block scope and functional scope
 */
 
-console.table([accountId,accountEmail, accountPassword, accountCity, accountSate])
+console.table([accountId,accountEmail, accountPassword, accountCity, accountSate])   
