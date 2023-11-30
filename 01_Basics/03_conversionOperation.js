@@ -79,5 +79,7 @@ function(){}	    NaN	                "function(){}"	    true
 { }	                NaN	                "[object Object]"	true	
 null	            0	                "null"	            false	
 undefined	        NaN	                "undefined"	        false
+.
+
 
 */
