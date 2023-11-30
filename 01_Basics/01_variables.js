@@ -1,8 +1,18 @@
+/*
+variables :- variables are container for storing data 
+variables in JS is declare in 4 ways
+1. const
+2.Var
+3.Let
+4.Automatically
+*/
+
+
 const accountId=12345;
 let accountEmail = "ashfaq@google.com";
-var accuntPassword = "123#ashfaq";
+var accountPassword = "123#ashfaq";
 accountCity = "Bengaluru"; 
-let accountSate;
+let accountSate;   //it will execute but the value will be undefined
 
 
 // accountId = 45;  //not allowed because const has fixed value and won't change
@@ -18,4 +28,4 @@ Prefer not to use var
 because of issue in block scope and functional scope
 */
 
-console.table([accountId,accountEmail, accuntPassword, accountCity, accountSate])
+console.table([accountId,accountEmail, accountPassword, accountCity, accountSate])
