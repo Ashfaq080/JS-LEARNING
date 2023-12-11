@@ -91,4 +91,4 @@ let str3 = str1 + str2;
 // console.log(1+ 2 +3+ "4");    //always remember in JS code readibility is from left to right
 // console.log("4" +3 +2+1);
 
-console.log(3 + 2 * 4 - (9 % 1) / 2);
+console.log(3 + 2 * 4 - (9 % 1) / 2); //this is not the correct way to writre a code, code should be simple and easy to understand
