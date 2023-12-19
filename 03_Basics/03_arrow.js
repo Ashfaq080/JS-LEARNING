@@ -24,36 +24,49 @@ const userLogIn = {
 // console.log(this);  //here there is no value to refer to return empty object{}
 
 //let us know that "this" works in function or not
-function ramdom() {
-    let user = "Ashfaq"
-    console.log(this.user);  // undefined, that mean "this" won't work in functions
-}
-ramdom()
+// function ramdom() {
+//     let user = "Ashfaq"
+//     console.log(this.user);  // undefined, that mean "this" won't work in functions
+// }
+// ramdom()
+
+
 
 /* Arrow function */
+//syntax :
+//  const user_Name = ()=>{}   
 
-const chai =  () => {
-    let username = "hitesh"
+const user_Name =  () => {
+    let username = "Ashfaq"
     console.log(this);
 }
 
+user_Name()
 
-// chai()
+//ways to write arrow function
 
+// 1. Basics arrow function
 // const addTwo = (num1, num2) => {
 //     return num1 + num2
-// }
 
-// const addTwo = (num1, num2) =>  num1 + num2
+// }
+// console.log(addTwo(3, 4))
+
+
+//2. Implicit return
+const addTwo = (num1, num2) =>  num1 + num2
+console.log(addTwo(31, 420))
 
 // const addTwo = (num1, num2) => ( num1 + num2 )
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+// const addTwo = (num1, num2) => ({username: "Ashfaq"})
 
 
-console.log(addTwo(3, 4))
+// console.log(addTwo(3, 4))
 
 
 // const myArray = [2, 5, 3, 7, 8]
 
 // myArray.forEach()
+
+
