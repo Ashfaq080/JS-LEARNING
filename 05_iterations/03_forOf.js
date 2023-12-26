@@ -15,6 +15,10 @@ for (const val of states) {
     // console.log(val);
 }
 
+
+// MAPS
+
+
 // Maps :- The Map object holds key-value pairs and remembers the original insertion order of the keys. 
 // Maps won't allow duplicate values it's allow unique key value pair.
 
