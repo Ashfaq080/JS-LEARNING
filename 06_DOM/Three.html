@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODES and DOM</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    
+</body>
+<script>
+    //how to create DIV element using DOM
+
+    const div = document.createElement('div')  // using createElement proprty we can creat any element such as h1, img, etc..
+    console.log(div);
+
+    div.className = "main"     // there are many props used here for different operations className used to give class. and lly we have id and etc..
+    div.id = Math.round(Math.random() * 10 + 1)  //we can give id also and JS methods such as given
+    div.style.backgroundColor = 'green'
+    div.style.padding = '15px'
+    div.style.borderRadius = '10px'
+    div.setAttribute("title", "genrate title")
+    // div.innerText = 'ASHFAQ AHMED' // this always over write the values and the run time will run in 2 round Trip, first fetch the variable from memory and then second over write the values.
+    
+    const addTxt = document.createTextNode("Ashfaq Ahmed")
+    div.appendChild(addTxt)       // this is also a 2 round trip you can use any one of the method
+
+    //the above methods and property are used to creates but not to print in browser you will get it in console but to attachd this  
+
+    //to  attached this on documents
+
+    document.body.appendChild(div)
+
+
+
+</script>
+</html>
