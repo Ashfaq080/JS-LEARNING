@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" type="text/css" href="../styles.css" /> -->
+    <title>Your Local Time</title>
+   <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+    body {
+    background-color: #000;
+    color: #fff;
+  }
+  .center {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #clock {
+    font-size: 40px;
+    background-color: orange;
+    padding: 20px 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+   </style>
+  </head>
+  <body>
+    
+    <div class="center">
+      <div id="banner"><span>Your local time</span></div>
+      <div id="clock"></div>
+    </div>
+    <script src="chaiaurcode.js"></script>
+  </body>
+  <!-- <script src="script.js"></script> -->
+  <script>
+    const clock = document.getElementById('clock')
+// we can use querySelector also
+// const clock = document.querySelector('#clock')
+
+
+setInterval(function () {
+    
+    let date = new Date();
+    // console.log(date.toLocaleTimeString());  // toLacaleTimeString() is a methode in Date()
+    clock.innerHTML = date.toLocaleTimeString()
+    
+}, 1000)         // setInterval(function, time in milisecond)  give it based on your need but rember it is in mili seconds.
+  </script>
+</html>
