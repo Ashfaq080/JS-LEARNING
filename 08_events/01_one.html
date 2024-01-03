@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | HTML</title>
+</head>
+<style>
+#images{
+    display: block;
+    justify-content: center;
+}
+</style>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="./img/02_img.jpeg" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="./img/01_img.jpeg" alt=""></li>
+            <li><img width="200px" id="horse" src="./img/03_img.jpeg" alt=""></li>
+            <li><img width="200px" id="car" src="./img/04_img.jpeg" alt=""></li>
+            <li><img width="200px" id="goku" src="./img/05_img.jpg" alt="" ></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+        </ul>
+    </div>
+</body>
+<script>
+    /* in JS evnts run sequentially, some exceptions are there and we gona dissuess that only.
+        Events in JS is basically works on activity such as mousehover, click, etc..
+
+        There are 3 approaches to write Events
+        1. inSide tag :- just write event name ininde the tag and provide what to print
+        ex:-  <li><img width="200px" id="goku" src="./img/05_img.jpg" alt="" onclick = "alert('super sain goku')"></li>
+        
+        This approach is not good when your project is larg or scaleble.
+
+        2.
+    */
+    // document.getElementById('car').onclick = function(){
+    //     // alert("car clicked")           // in this approach also you will get lot of problem and it is better to use evient listniers
+    // }
+
+    /* this are some imp event listeners
+    attachEvent()
+    jQuery - on
+
+    type, timestamp, defaultPrevented
+    target, toElement, srcElement, currentTarget,
+    clientX, clientY, screenX, screenY
+    altkey, ctrlkey, shiftkey, keyCode
+*/
+
+    document.getElementById('images').addEventListener('click', function(e){
+        // console.log('clicked inside the ul');
+    }, false)
+
+    // events propagation, 1.event capturing :- if we provide 3rd parameter a true , 2. event bublling
+
+    document.getElementById('car').addEventListener('click', function(e){
+        // console.log("car clicked");
+        // e.stopPropagation()   // prevent bublling of event
+    }, false)
+
+    document.getElementById('google').addEventListener('click',function(e){
+        // e.preventDefault();
+        // e.stopPropagation()
+        // console.log("google clicked");
+    }, false)
+
+
+    // we will do some activity such as if we clicked any of the image then image will get delete.
+
+    document.querySelector('#images').addEventListener('click', function (event) {
+        console.log(event.target.tagName);
+        if (event.target.tagName === 'IMG') {
+            console.log(event.target.id);
+            let removeIt = event.target.parentNode
+            removeIt.remove()
+        }
+    })
+            
+    // removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
