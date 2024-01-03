@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Requst | JS</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+
+    <script>
+
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+        const xml = new XMLHttpRequest()
+        // xml.open('GET', 'https://api.github.com/users/hiteshchoudhary')  // this is haed coded not good practice
+        xml.open('GET', requestUrl)
+
+        xml.onreadystatechange = function () {
+            console.log(xml.readyState);       // this state is changing again and again  
+
+            if (xml.readyState === 4) {        // to detect and work on it 
+                // const data = this.responseText     // this refers to current context
+
+                const data = JSON.parse(this.responseText)  // to convert it in objects
+                console.log(typeof data);
+                console.log(data.followers);    // the data we get is string Type so you can't directly access it like objects
+            }
+
+        }            //to track it continously
+        // console.log(xml.readyState);   // to chceck the state of xmlHttpRequest().readyState, this is only for one time to track but to track it continuosly 
+
+        xml.send();
+    </script>
+</body>
+
+</html>
+
+
+<!-- to know about console.log of JS goto V8 engine  present in github open source  JS Is wrapped in C++ to know more goto V8 and ExploreIt -->
